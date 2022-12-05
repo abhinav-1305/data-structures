@@ -50,3 +50,24 @@ void lastinsert() {
         }
     }
 }
+
+void display() {
+    struct node *ptr;
+    ptr=head;
+    if(ptr==NULL) {
+        printf("\nEmpty Linked List");
+    }
+    else {
+        printf("\nValues: ");
+        while(ptr!=NULL) {
+            printf(" %d ",ptr->data);
+            ptr=ptr->next;
+        }
+    }
+}
+
+void main() {
+    beginsert();
+    //lastinsert();
+    display();
+}
